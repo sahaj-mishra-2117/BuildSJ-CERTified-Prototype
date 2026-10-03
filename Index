@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Be Ready Before It Happens - D10</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><link rel="stylesheet" href="style.css"></head><body>
+<header><h1>Be Ready Before It Happens<small>San Jose District 10 - Emergency Preparedness - BuildSJ prototype</small></h1>
+<nav><button class="on" data-tab="map">Map</button><button data-tab="check">My Preparedness</button><button data-tab="learn">Learn &amp; Prepare</button></nav></header>
+<section class="tab" id="tab-map"><aside id="side">
+<form id="search"><input type="text" id="addr" placeholder="Enter your address (e.g. 6000 Camden Ave)"><button class="btn" style="margin:0">Check my address</button></form>
+<div id="result"></div>
+<h4>Map layers</h4><div class="layers">
+<label><input type="checkbox" data-layer="routes"> Evacuation routes</label>
+<label><input type="checkbox" data-layer="wildfire"><i class="dot" style="background:#e8590c"></i> Wildfire hazard</label>
+<label><input type="checkbox" data-layer="quake"><i class="dot" style="background:#7048e8"></i> Fault rupture zone</label>
+<label><input type="checkbox" data-layer="liquefaction"><i class="dot" style="background:#1c7ed6"></i> Liquefaction zone</label></div>
+<p class="note">Prototype: zone and route geometry is illustrative and modeled on CAL FIRE, CGS and county evacuation data. Not for emergency decisions - follow official alerts.</p></aside><div id="map"></div></section>
+<section class="tab" id="tab-check" hidden><h2>My Preparedness</h2><p class="muted">Self-reported checklist based on the City of San Jose guidance. There is no official certification of a household, so this tracks progress, not readiness.</p>
+<p>Neighborhood: <select id="hood"></select></p><p><b>Your progress: <span id="mepct"></span></b></p><div class="bar"><i id="me" style="display:block;height:100%;background:#0b6bcb"></i></div>
+<div id="items"></div><h3>Neighborhood completion <span class="sample">SAMPLE DATA</span></h3><div id="board"></div></section>
+<section class="tab" id="tab-learn" hidden><h2>Learn &amp; Prepare</h2><div class="grid">
+<div class="panel"><h3>City preparedness guide</h3><p>Know your home's risks, build a disaster plan with evacuation routes and an out-of-town contact, assemble supply kits, and learn utility hazards.</p><a target="_blank" href="https://www.sanjoseca.gov/your-government/departments-offices/office-of-the-city-manager/emergency-management/be-prepared">City of San Jose: Be Prepared</a></div>
+<div class="panel"><h3>FEMA IS-317 (online, short)</h3><p>Introduction to Community Emergency Response Teams: the realistic first step for most residents.</p><a target="_blank" href="https://training.fema.gov/programs/independent-study/courseoverview.aspx?code=IS-317.a&lang=en">Take the course</a></div>
+<div class="panel"><h3>CERT training (in person)</h3><p>A 20-hour volunteer certification. A bigger commitment, for residents who want hands-on skills.</p><a target="_blank" href="https://www.sanjoseca.gov/your-government/departments-offices/office-of-the-city-manager/emergency-management/be-trained/community-emergency-response-team-training">City of San Jose: CERT</a></div></div></section>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="data.js"></script><script src="app.js"></script></body></html>
