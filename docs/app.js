@@ -1,7 +1,7 @@
 const $=s=>document.querySelector(s);
 const map=L.map('map',{zoomControl:false}).setView([37.225,-121.85],12);
 L.control.zoom({position:'bottomright'}).addTo(map);
-L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap &copy; CARTO'}).addTo(map);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
 const group={};
 const hood=L.layerGroup(NEIGHBORHOODS.map(n=>L.polygon(n.poly,{color:'#495057',weight:1.5,dashArray:'4',fillOpacity:.03}).bindTooltip(n.name,{sticky:true}))).addTo(map);
 for(const [k,h] of Object.entries(HAZARDS))group[k]=L.layerGroup(h.polys.map(p=>L.polygon(p,{color:h.color,weight:2,fillOpacity:.25}).bindPopup(`<b>${h.label}</b><br><small>${h.src}</small>`)));
