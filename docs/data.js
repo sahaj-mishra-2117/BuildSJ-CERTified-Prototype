@@ -75,16 +75,105 @@ const ROUTES=[
 {name:"Blossom Hill Rd to Hwy 101",pts:[[37.25,-121.89],[37.25,-121.85],[37.24,-121.82],[37.235,-121.79]],assembly:"Blossom Hill Rd park & ride area"},
 {name:"Santa Teresa Blvd north",pts:[[37.19,-121.79],[37.22,-121.795],[37.25,-121.80],[37.28,-121.80]],assembly:"Santa Teresa Library area"}];
 
+// Preparedness checklist based on San Jose recommendations
 const CHECKLIST=[
-{id:"risk",t:"Know my hazards",d:"Looked up whether my home is in a wildfire, fault or liquefaction zone."},
-{id:"alerts",t:"Signed up for emergency alerts",d:"Registered for county/city alert notifications (AlertSCC, Genasys, etc)."},
-{id:"plan",t:"Household disaster plan",d:"Everyone knows two ways out of the neighborhood and where to meet."},
-{id:"contact",t:"Out-of-town contact",d:"One relative or friend outside the area everyone will check in with."},
-{id:"kit",t:"Disaster supply kit",d:"Water, food, medications, flashlight, radio, first aid at home."},
-{id:"go",t:"Go-bag by the door",d:"Portable kit ready for a fast evacuation."},
-{id:"util",t:"Utility shutoffs located",d:"I know how to shut off gas, water and electricity."},
-{id:"secure",t:"Home secured",d:"Heavy furniture anchored; defensible space cleared if near hills."},
-{id:"train",t:"Took an awareness course",d:"Completed FEMA IS-317 or similar (CERT counts too)."}];
+  {
+    category:"Know Your Hazards",
+    id:"risk-wildfire",
+    title:"Understand wildfire risks",
+    desc:"Check if your home is in a CAL FIRE High/Very High Fire Hazard Zone and understand fire evacuation zones."
+  },
+  {
+    category:"Know Your Hazards",
+    id:"risk-earthquake",
+    title:"Understand earthquake/fault risks",
+    desc:"Check if your home is in or near a seismic hazard zone, fault rupture area, or liquefaction zone."
+  },
+  {
+    category:"Know Your Hazards",
+    id:"risk-evacuation",
+    title:"Know evacuation zones",
+    desc:"Check if your home is in a county evacuation zone and know which route to use."
+  },
+  {
+    category:"Create Disaster Plans",
+    id:"plan-evac-routes",
+    title:"Plan evacuation routes",
+    desc:"Identify 2+ ways to leave your neighborhood and practice the routes with family."
+  },
+  {
+    category:"Create Disaster Plans",
+    id:"plan-meeting-place",
+    title:"Designate family meeting location",
+    desc:"Choose an out-of-area location to evacuate to and ensure all family members know it."
+  },
+  {
+    category:"Create Disaster Plans",
+    id:"plan-contact",
+    title:"Set out-of-town contact person",
+    desc:"Identify one family member or trusted friend outside the area everyone will check in with."
+  },
+  {
+    category:"Disaster Supply Kit",
+    id:"kit-water-food",
+    title:"Stock water & food",
+    desc:"Have 1 gallon of water per person per day (2-week supply) and non-perishable food."
+  },
+  {
+    category:"Disaster Supply Kit",
+    id:"kit-documents",
+    title:"Prepare important documents",
+    desc:"Gather copies of insurance, deeds, IDs, medical records, and store in waterproof container."
+  },
+  {
+    category:"Disaster Supply Kit",
+    id:"kit-medical",
+    title:"Stock medications & medical supplies",
+    desc:"Pack prescription medications, first aid kit, and any medical equipment you need."
+  },
+  {
+    category:"Disaster Supply Kit",
+    id:"kit-supplies",
+    title:"Prepare emergency supplies",
+    desc:"Include flashlight, batteries, radio, whistle, dust masks, and tools."
+  },
+  {
+    category:"Home Hazard Reduction",
+    id:"hazard-fire",
+    title:"Reduce fire hazards in home",
+    desc:"Clear gutters, trim tree branches near roof, remove dead vegetation, use fire-resistant materials."
+  },
+  {
+    category:"Home Hazard Reduction",
+    id:"hazard-gas",
+    title:"Locate gas/water shut-offs",
+    desc:"Know how to turn off gas, water, and electricity at main valves in case of damage."
+  },
+  {
+    category:"Home Hazard Reduction",
+    id:"hazard-secure",
+    title:"Secure heavy furniture",
+    desc:"Bolt down water heater, secure tall furniture and shelves to prevent falling during shaking."
+  },
+  {
+    category:"Additional Preparedness",
+    id:"extra-alert",
+    title:"Sign up for emergency alerts",
+    desc:"Register for AlertSCC (San Jose's alert system) and local emergency notifications."
+  },
+  {
+    category:"Additional Preparedness",
+    id:"extra-insurance",
+    title:"Review insurance coverage",
+    desc:"Check homeowners/renters insurance and consider earthquake/flood coverage gaps."
+  },
+  {
+    category:"Additional Preparedness",
+    id:"extra-training",
+    title:"Take emergency response training",
+    desc:"Complete FEMA IS-317 online course or local CERT training for hands-on preparedness skills."
+  }
+];
 
 // SAMPLE data only - clearly labeled in the UI. n = people, sum = total of their % scores.
 const SEED={"Cambrian":{n:14,sum:700},"Almaden Valley":{n:22,sum:1450},"Blossom Valley":{n:9,sum:380},"Santa Teresa":{n:11,sum:610}};
