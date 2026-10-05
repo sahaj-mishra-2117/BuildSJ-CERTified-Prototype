@@ -8,10 +8,13 @@ nav button.on{background:#13315c;color:#fff}
 input[type=text]{width:100%;padding:11px;border:1px solid #ced4da;border-radius:8px;font-size:15px;margin-bottom:8px}
 .btn{width:100%;padding:10px;border:0;border-radius:8px;background:#0b6bcb;color:#fff;font-size:14px;cursor:pointer;margin-top:10px}
 .layers label{display:flex;align-items:center;gap:8px;padding:6px 0;font-size:14px}.dot{width:12px;height:12px;border-radius:3px}
+.official-badge{background:#e7f5ff;border-left:4px solid #0b6bcb;padding:10px 12px;margin-bottom:16px;border-radius:6px;font-size:13px;font-weight:600;color:#0b6bcb}
+.source-badge{display:inline-block;background:#f1f3f5;color:#495057;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600;margin-left:4px}
 .card{border:1px solid #dee2e6;border-radius:12px;padding:14px;margin-top:12px}h4{margin:14px 0 6px;font-size:13px;text-transform:uppercase;color:#868e96}
 .chip{display:inline-block;color:#fff;padding:4px 10px;border-radius:99px;font-size:12px;margin:2px 2px 2px 0}
+.chip-source{font-size:11px;margin-left:6px;opacity:.9}
 .route{display:flex;justify-content:space-between;padding:8px 10px;background:#ebfbee;border-radius:8px;margin:4px 0;font-size:14px}
-.muted{color:#868e96;font-size:13px}.warn{color:#c92a2a;font-size:14px}.note{font-size:12px;color:#868e96;margin-top:16px}
+.muted{color:#868e96;font-size:13px}.warn{color:#c92a2a;font-size:14px}.note{font-size:12px;color:#495057;margin-top:16px;padding:8px;background:#f8f9fa;border-radius:6px;line-height:1.5}
 .route-flow{stroke-dasharray:10 10;animation:flow 1s linear infinite}@keyframes flow{to{stroke-dashoffset:-20}}
 .item{display:flex;gap:12px;padding:12px;background:#fff;border:1px solid #dee2e6;border-radius:10px;margin:8px 0;cursor:pointer}
 .bar{flex:1;height:10px;background:#e9ecef;border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:#2b8a3e}
